@@ -10,6 +10,7 @@ import org.hibernate.classic.Session;
 import org.hibernate.criterion.Criterion;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -18,8 +19,7 @@ import java.util.List;
  * Created by nadya on 8/16/14.
  */
 
-//@SpringBean(name = "generalDao")
-@Resource(name = "generalDao")
+@Service
 public class GeneralDaoImpl implements GeneralDao {
 
     @Autowired

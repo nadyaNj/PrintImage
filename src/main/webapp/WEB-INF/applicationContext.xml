@@ -43,7 +43,7 @@
 -->
 
     <bean id="sessionFactory"  class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
-        <property name="dataSource" ref="dataSource"></property>
+        <property name="dataSource" ref="dataSource"/>
         <!--<property name="annotatedPackages" value="am.training.dao.entity"/>-->
         <property name="annotatedClasses">
             <list>
@@ -74,10 +74,11 @@
     </bean>
 
 	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
-		<property name="sessionFactory" ref="sessionFactory"></property>	
+		<property name="sessionFactory" ref="sessionFactory"/>
 	</bean>
 		
 	<tx:annotation-driven transaction-manager="transactionManager"/>
+
 	<context:component-scan base-package="am.training.dao"/>
 
 </beans>
